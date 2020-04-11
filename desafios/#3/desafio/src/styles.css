@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+div {
+  width: 100%;
+  margin: 15px auto;
+}
+
+div li {
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width:70%;
+}
+
+div li + li {
+  margin-top: 15px;
+}
+
+button {
+  background: #7159c1;
+  color: #fff;
+  border: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.addButton{
+  
+  position: absolute;
+  right: 15px;
+}
+
+div li button {
+  margin: 0 15px;
+  background: #ca4949;
+}
