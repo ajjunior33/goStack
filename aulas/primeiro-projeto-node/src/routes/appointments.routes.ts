@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { uuid } from 'uuidv4';
+import { startOfHour, parseISO } from 'date-fns';
 
 const appointmentsRouter = Router();
 
@@ -9,18 +10,18 @@ appointmentsRouter.post('/', (request, response) => {
     const { provider, date } = request.body;
 
     /* ** Json
-
         {
             "provider": " Diego Fenandes",
-            "date": Timestamp => IS-8601
+            "date": Timestamp => ISO-8601
         }
-
     */
+
+    const parsedDate = startOfHour(parseISO(date));
 
     const appointment = {
         id: uuid(),
         provider,
-        date,
+        parsedDate,
     };
 
     appointments.push(appointment);
